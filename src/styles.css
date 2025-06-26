@@ -1,3 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "tailwindcss";
+
+.theme-orange-color {
+    color: #FE7743;
+}
+
+.theme-white-color {
+    color: #EFEEEA;
+}
+
+.theme-navy-color {
+    color: #273F4F;
+}
+
+.theme-black-color {
+    color: #000000;
+}
