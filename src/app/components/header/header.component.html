@@ -1,0 +1,18 @@
+<header class="flex justify-between px-6 py-4">
+    <h1 class="theme-orange-color">{{ title() || "" }}</h1>
+    <div class="flex gap-4">
+        @for (item of headerMenuList(); track item.label) {
+            <span
+                class="theme-orange-color"
+                (click)="item.click()"
+            >{{ item.label }}</span>
+        }
+        @for (item of headerIconList(); track item.source) {
+            <img
+                [src]="item.source"
+                alt=""
+                (click)="item.click()"
+            >
+        }
+    </div>
+</header>
