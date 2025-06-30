@@ -2,16 +2,16 @@
 
 @import "tailwindcss";
 
-.theme-orange-color {
+.theme-primary-color {
     color: #FE7743;
+}
+
+.theme-secondary-color {
+    color: #143D60;
 }
 
 .theme-white-color {
     color: #EFEEEA;
-}
-
-.theme-navy-color {
-    color: #273F4F;
 }
 
 .theme-black-color {

@@ -13,9 +13,28 @@ export interface HeaderIconItem {
 
 @Component({
     selector: "header-component",
-    templateUrl: "./header.component.html",
+    template: `
+        <header class="flex justify-between px-6 py-4">
+            <h1 class="theme-primary-color">{{ title() || "" }}</h1>
+            <div class="flex gap-4">
+                @for (item of headerMenuList(); track item.label) {
+                    <span
+                        class="theme-primary-color"
+                        (click)="item.click()"
+                    >{{ item.label }}</span>
+                }
+                @for (item of headerIconList(); track item.source) {
+                    <img
+                        [src]="item.source"
+                        alt=""
+                        (click)="item.click()"
+                    >
+                }
+            </div>
+        </header>
+    `
 })
-export class HeaderComponent implements BaseComponent {
+export class HeaderComponent extends BaseComponent {
 
     readonly title: InputSignal<string> = input<string>("");
     readonly headerMenuList = input<HeaderMenuItem[]>([]);
